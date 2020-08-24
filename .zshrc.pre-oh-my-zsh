@@ -96,53 +96,37 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# . /etc/zsh_command_not_found
-# autoload predict-on
-# predict-on
+. /etc/zsh_command_not_found
+#autoload predict-on
+#predict-on
 
 
-export TURTLEBOT_GAZEBO_WORLD_FILE="/home/kringata/catkin_ws/src/turtlebot_simulator-indigo/turtlebot_gazebo/worlds/playground.world"
-export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:/lib:/usr/lib:/usr/local/lib"
-# LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kringata/qtbase/lib; 
-# export LD_LIBRARY_PATH
-export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/qt5/plugins
-
-###### For Home #######
-ROS="/home/kringata/Desktop/ROS"
-# cd $home
 
 ##### ROS #######
+# alias scart="source ~/Desktop/ROS/WORKSPACES/DLIVE/cartographer_ws/install_isolated/setup.zsh"
 alias sit="source devel/setup.zsh"
-alias smain="source $ROS/WORKSPACES/DLIVE/main_ws/devel/setup.zsh"
-alias scart="source $ROS/WORKSPACES/CARTOGRAPHER/install_isolated/setup.zsh"
-alias unity="$ROS/SIMULATORS/Unity3D/Editor/Unity"
-alias ue4="$ROS/SIMULATORS/Unrealengine/Engine/Binaries/Linux/UE4Editor"
+alias smain="source ~/Desktop/ROS/WORKSPACES/DLIVE/main_ws/devel/setup.zsh"
+alias scart="source ~/Desktop/ROS/WORKSPACES/CARTOGRAPHER/install_isolated/setup.zsh"
+alias unity="/home/kringata/Desktop/ROS/Simulators/Unity3D/Editor/Unity"
+alias ue4="/home/kringata/Desktop/ROS/Simulators/Unrealengine/Engine/Binaries/Linux/UE4Editor"
 
-source /opt/ros/melodic/setup.zsh
-source ~/catkin_ws/devel/setup.zsh
+source /opt/ros/kinetic/setup.zsh
+source ~/Desktop/ROS/WORKSPACES/DLIVE/main_ws/devel/setup.zsh
 
 
-export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.6/dist-packages
-export UE4_ROOT=$ROS/SIMULATORS/Unrealengine
-export TURTLEBOT3_MODEL=burger
-# export TURTLEBOT_GAZEBO_WORLD_FILE="/opt/ros/melodic/share/turtlebot_gazebo/worlds/playground.world"
-# export TURTLEBOT_GAZEBO_WORLD_FILE="/opt/ros/melodic/share/turtlebot_gazebo/worlds/playground.world"
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/dist-packages
+export UE4_ROOT=~/Desktop/ROS/Simulators/Unrealengine
+export TURTLEBOT_GAZEBO_WORLD_FILE="/opt/ros/kinetic/share/turtlebot_gazebo/worlds/playground.world"
 
 
 
-# # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/media/9754e0fa-2df5-4c05-9a3e-1f1da277ecc7/home/kringata/Desktop/Anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/media/9754e0fa-2df5-4c05-9a3e-1f1da277ecc7/home/kringata/Desktop/Anaconda/etc/profile.d/conda.sh" ]; then
-#         . "/media/9754e0fa-2df5-4c05-9a3e-1f1da277ecc7/home/kringata/Desktop/Anaconda/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/media/9754e0fa-2df5-4c05-9a3e-1f1da277ecc7/home/kringata/Desktop/Anaconda/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
 
-# source activate ML
+# Export the Android SDK path 
+# export ANDROID_HOME=/opt/android-sdk
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# export PATH=\${PATH}:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-studio/bin
+
+# Fixes sdkmanager error with java versions higher than java 8
+# export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
